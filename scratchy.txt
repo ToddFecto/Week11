@@ -1,0 +1,92 @@
+@model QuestionAnswers
+@{
+    ViewData["Title"] = "ListAnswers";
+}
+
+<h1>Answers For Question # @Model.ques.id</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Answer</th>
+            <th>username</th>
+            <th>Title</th>
+            <th>Detail</th>
+            <th>Posted</th>
+            <th>Category</th>
+            <th>Tags</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (Answer answ in Model.answs)
+        {
+            <tr>
+                <td><a href="/QandA/answer?answ=@answ.id">@answ.id</a></td>
+                <td>@answ.username</td>
+                <td>@answ.detail</td>
+                <td>@answ.posted</td>
+                <td>@answ.upvotes</td>
+                <td>
+                    <a asp-action="DeleteAnswer" asp-route-answid="@answ.id" class="btn btn-danger">Delete</a>
+                    <a asp-action="EditAform" asp-route-answid="@answ.id" class="btn btn-secondary">Edit</a>
+                    <a class="nav-link text-dark" asp-area="" asp-controller="QandA" asp-action="Index"> class=" btn btn-primary">Questions</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/QandA/addAform" class="btn btn-primary">Add Answer</a>
+
+Posted: <input type="datetime-local" name="posted" /><br />
+
+<a href="/QandA/delete?id=@Model.id" class="btn btn-danger">Delete</a>
+<a asp-action="DeleteQuestion" asp-route-quesid="@ques.id" class="btn btn-danger">Delete</a>
+
+In GitHub repository to clone copy code URL to clipboard. Using Bash on your pc, cd to where you want to create the clone and type: git clone <paste URL here> and then cd into it.
+
+select * from question;
+select * from answer;
+
+drop table question;
+alter table question modify posted datetime not null default NOW();
+
+drop table answer;
+alter table answer modify posted datetime not null default NOW();
+========
+ListDish:
+@model Dish
+@{
+    ViewData["Title"] = "ListDish";
+}
+
+<h1>Dish Details</h1>
+
+<div>Name: @Model.TMName</div>
+<div>Phone Number: @Model.PhoneNumber</div>
+<div>Dish Name: @Model.DishName</div>
+<div>Dish Description: @Model.DishDescription</div>
+<div>Dish Category: @Model.Category</div>
+
+<a href="/FoCPotluck/editDishform?dishid=@Model.id" class="btn btn-secondary">Edit</a>
+<a href="/FoCPotluck/teammember?tmid=@Model.id" class="btn btn-primary">TM</a>
+
+ListAllTM's:
+            <th>Dish</th>
+                <td>
+                    <a asp-action="ListDish" asp-route-tmid="@tms.id" class=" btn btn-primary">Dish</a>
+                </td>
+
+ListAllDishes:
+            <th>Dish</th>
+                <td>
+                    <a asp-action="ListDish" asp-route-dishid="@dishes.id" class=" btn btn-primary">Dish</a>
+                </td>
+
+teammember:
+<a href="/FoCPotluck/ListDish?tmid=@Model.id" class="btn btn-primary">Dish</a>
+
+================
+lil side note -- if you're interested in seeing the JSON of an Instagram post, you can add /?__a=1 to the end of the post URL. that's their endpoint (instead of the common .json suffix)

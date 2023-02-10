@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "addQform";
+}
+
+<h1>Add New Question</h1>
+
+<form method="post" action="/QandA/addques">
+    User Name: <input type="text" name="username" /><br />
+    Title: <input type="text" name="title" /><br />
+    Details: <input type="text" name="detail" /><br />
+    Posted: <input type="datetime-local" name="posted" /><br />
+    <label for="category">Category:</label>
+    <select name="category" id="category">
+        <option value="">Choose a category:</option>
+        <option value="SOFTWARE">SOFTWARE</option>
+        <option value="OFFICE365">OFFICE365</option>
+        <option value="WINDOWS">WINDOWS</option>
+        <option value="MYSQL">MYSQL</option>
+        <option value="VISUALSTUDIO">VISUALSTUDIO</option>
+        <option value="CHROME">CHROME</option>
+        <option value="EDGE">EDGE</option>
+        <option value="GITHUB">GITHUB</option>
+    </select><br />
+    Tags: <input type="text" name="tags" /><br />
+    Status: <input type="text" name="status" /><br />
+    <input type="submit" value="Save" />
+</form>

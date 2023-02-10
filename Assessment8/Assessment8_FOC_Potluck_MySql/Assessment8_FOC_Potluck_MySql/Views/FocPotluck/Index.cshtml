@@ -1,0 +1,45 @@
+﻿@model List<TeamMember>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<link href="/css/styles.css" rel="stylesheet" />
+
+<h1>Team Members Attending FoCPotluck</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Attendance Date</th>
+            <th>Guest</th>
+            <th>Delete</th>
+            <th>Edit</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (TeamMember tms in Model)
+        {
+            <tr>
+                <td><a href="/FoCPotluck/teammember?tm=@tms.id">@tms.id</a></td>
+                <td>@tms.FirstName</td>
+                <td>@tms.LastName</td>
+                <td>@tms.EmailAddress</td>
+                <td>@tms.AttendanceDate</td>
+                <td>@tms.GuestName</td>
+                <td>
+                    <a href="/FocPotluck/deletetm?id=@tms.id" class="btn btn-danger">Delete</a>
+                </td>
+                <td>
+                    <a asp-action="EditTMform" asp-route-tmid="@tms.id" class="btn btn-secondary">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/FocPotluck/RSVP" class="btn btn-primary">TM RSVP</a>

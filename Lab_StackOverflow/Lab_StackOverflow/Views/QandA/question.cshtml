@@ -1,0 +1,17 @@
+﻿@model Question
+@{
+    ViewData["Title"] = "question";
+}
+
+<h1>Question Details</h1>
+
+<div>Username: @Model.username</div>
+<div>Title: @Model.title</div>
+<div>Details: @Model.detail</div>
+<div>Posted: @Model.posted</div>
+<div>Category: @Model.category</div>
+<div>Tags: @Model.tags</div>
+<div>Status: @Model.status</div>
+
+<a href="/QandA/delete?id=@Model.id" class="btn btn-danger">Delete</a>
+<a href="/QandA/editQform?quesid=@Model.id" class="btn btn-primary">Edit</a>

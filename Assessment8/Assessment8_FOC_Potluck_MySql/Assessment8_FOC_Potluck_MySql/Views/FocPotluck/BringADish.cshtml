@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "BringADish";
+}
+
+<link href="/css/styles.css" rel="stylesheet" />
+
+<div class="BringDish">
+    <h2>Bring A Dish</h2>
+</div>
+
+<div>
+    @ViewData["Message"]
+</div>
+
+<div class="BringDishForm">
+    <form method="post" action="/FocPotluck/DishThankYou">
+        Name: <input type="text" name="TMName" /><br />
+        <label for="PhoneNumber">Phone Number:</label>
+        <input type="tel" id="PhoneNumber" name="PhoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required /><small>Format: 123-456-7890</small><br />
+        DishName: <input type="text" name="DishName" /><br />
+        DishDescription: <input type="text" name="DishDescription" /><br />
+        <label for="Category">Category:</label>
+        <select name="Category" id="Category">
+            <option value="">Choose a Category:</option>
+            <option value="Main Dish">Main Dish</option>
+            <option value="Appetizer">Appetizer</option>
+            <option value="Salad">Salad</option>
+            <option value="Dessert">Dessert</option>
+            <option value="Beverage">Beverage</option>
+        </select><br />
+        <input type="submit" />
+    </form>
+</div>
+

@@ -1,0 +1,14 @@
+﻿@model TeamMember
+@{
+    ViewData["Title"] = "teammember";
+}
+
+<h1>Team Member Details</h1>
+
+<div>Name: @Model.FirstName @Model.LastName</div>
+<div>Email: @Model.EmailAddress</div>
+<div>Attendance Date: @Model.AttendanceDate</div>
+<div>Guest: @Model.GuestName</div>
+
+<a href="/FoCPotluck/editTMform?tmid=@Model.id" class="btn btn-secondary">Edit</a>
+

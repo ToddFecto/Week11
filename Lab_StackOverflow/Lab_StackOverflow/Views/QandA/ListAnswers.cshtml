@@ -1,0 +1,26 @@
+﻿@model QuestionAnswers
+@{
+    ViewData["Title"] = "ListAnswers";
+}
+
+
+
+
+@foreach (Answer answ in Model.answs)
+{
+<h1>Answers For Question # @answ.questionId</h1>
+    <div>
+        Answer #@answ.id<br />
+        Username: @answ.username<br />
+        Details: @answ.detail<br />
+        Posted: @answ.posted<br />
+        Tags: @Model.ques.tags<br />
+        Upvotes: @answ.upvotes<br />
+        <a asp-action="DeleteAnswer" asp-route-answid="@answ.id" class="btn btn-danger">Delete</a>
+        <a asp-action="EditAform" asp-route-answid="@answ.id" class="btn btn-secondary">Edit</a>
+    </div>
+}
+<br />
+
+<a href="/QandA" class=" btn btn-primary">Questions</a>
+<a href="/QandA/addAform" class="btn btn-primary">Add Answer</a>

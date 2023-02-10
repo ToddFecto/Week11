@@ -1,0 +1,29 @@
+﻿@model EditQuestionAnswer
+@{
+    ViewData["Title"] = "editAform";
+}
+
+<h1>Edit Answer #@Model.answ.id for Question #@Model.ques.id</h1>
+
+<form method="post" action="/QandA/saveansw">
+    <input type="hidden" name="Id" value="@Model.ques.id" />
+    User Name: <input type="text" name="username" value="@Model.answ.username" /><br />
+    Details: <input type="text" name="detail" value="@Model.answ.detail" /><br />
+    <input type="hidden" name="questionId" value="@Model.ques.id" />
+    Posted: <input type="datetime-local" name="posted" value="@Model.ques.posted" /><br />
+    <label for="category">Category:</label>
+    <select name="category" id="category">
+        <option value="@Model.ques.category">@Model.ques.category</option>
+        <option value="SOFTWARE">SOFTWARE</option>
+        <option value="OFFICE365">OFFICE365</option>
+        <option value="WINDOWS">WINDOWS</option>
+        <option value="MYSQL">MYSQL</option>
+        <option value="VISUALSTUDIO">VISUALSTUDIO</option>
+        <option value="CHROME">CHROME</option>
+        <option value="EDGE">EDGE</option>
+        <option value="GITHUB">GITHUB</option>
+    </select><br />
+    Tags: <input type="text" name="tags" vlue="@Model.ques.tags" /><br />
+    Status: <input type="text" name="status" value="@Model.ques.status" /><br />
+    <input type="submit" value="Save" />
+</form>

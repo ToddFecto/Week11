@@ -1,0 +1,21 @@
+﻿@model Dish
+@{
+    ViewData["Title"] = "DishThankYou";
+}
+
+<link href="/css/styles.css" rel="stylesheet" />
+
+<div class="ThankYouBox">
+    Thank you @Model.TMName for volunteering, to bring something to our FoC Potluck!!
+    <br />
+    Please review your items' details listed below:
+    <ul>
+        <li>Name: @Model.TMName</li>
+        <li>Phone: <a href="tel: @Model.PhoneNumber">@Model.PhoneNumber</a></li>
+        <li>Dish Name: @Model.DishName</li>
+        <li>Dish Description: @Model.DishDescription</li>
+        <li>Category: @Model.Category</li>
+    </ul>
+</div>
+<br />
+

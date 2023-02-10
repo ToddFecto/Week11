@@ -1,0 +1,25 @@
+﻿@model TeamMemberDishes
+@{
+    ViewData["Title"] = "ListDish";
+}
+
+<h1>Dish Details For TM @Model.tm.id</h1>
+
+
+@foreach (Dish dish in Model.dishes)
+ {
+<div>
+    Name: @dish.TMName<br />
+    Phone Number: @dish.PhoneNumber<br />
+    Dish Name: @dish.DishName<br />
+    Dish Description: @dish.DishDescription<br />
+    Dish Category: @dish.Category<br />
+    <a href="/FoCPotluck/editDishform?dishid=@dish.id" class="btn btn-secondary">Edit</a>
+    <a asp-action="EditDishform" asp-route-dishid="@dish.id" class="btn btn-secondary">Edit</a>
+</div>
+<br />
+ }
+
+
+<a href="/FoCPotluck/BringADish" class="btn btn-primary">Add Dish</a>
+

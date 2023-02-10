@@ -1,0 +1,36 @@
+﻿@model Dish
+@{
+    ViewData["Title"] = "editDishform";
+}
+
+<link href="/css/styles.css" rel="stylesheet" />
+
+<div class="BringDish">
+    <h2>Edit the Dish</h2>
+</div>
+
+<div>
+    @ViewData["Message"]
+</div>
+
+<div class="BringDishForm">
+    <form method="post" action="/FocPotluck/savedish">
+        <input type="hidden" name="id" value="@Model.id" />
+        Name: <input type="text" name="TMName" value="@Model.TMName"/><br />
+        <label for="PhoneNumber">Phone Number:</label>
+        <input type="tel" id="PhoneNumber" name="PhoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required value="@Model.PhoneNumber"/><small>Format: 123-456-7890</small><br />
+        Dish Name: <input type="text" name="DishName" value="@Model.DishName"/><br />
+        Dish Description: <input type="text" name="DishDescription" value="@Model.DishDescription"/><br />
+        <label for="Category">Dish Category:</label>
+        <select name="Category" id="Category">
+            <option value="@Model.Category">@Model.Category</option>
+            <option value="Main Dish">Main Dish</option>
+            <option value="Appetizer">Appetizer</option>
+            <option value="Salad">Salad</option>
+            <option value="Dessert">Dessert</option>
+            <option value="Beverage">Beverage</option>
+        </select><br />
+        <input type="submit" />
+    </form>
+</div>
+

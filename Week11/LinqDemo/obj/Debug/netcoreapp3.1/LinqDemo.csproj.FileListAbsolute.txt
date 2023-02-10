@@ -1,0 +1,14 @@
+C:\Dev\Week11\Week11\LinqDemo\bin\Debug\netcoreapp3.1\LinqDemo.exe
+C:\Dev\Week11\Week11\LinqDemo\bin\Debug\netcoreapp3.1\LinqDemo.deps.json
+C:\Dev\Week11\Week11\LinqDemo\bin\Debug\netcoreapp3.1\LinqDemo.runtimeconfig.json
+C:\Dev\Week11\Week11\LinqDemo\bin\Debug\netcoreapp3.1\LinqDemo.runtimeconfig.dev.json
+C:\Dev\Week11\Week11\LinqDemo\bin\Debug\netcoreapp3.1\LinqDemo.dll
+C:\Dev\Week11\Week11\LinqDemo\bin\Debug\netcoreapp3.1\LinqDemo.pdb
+C:\Dev\Week11\Week11\LinqDemo\obj\Debug\netcoreapp3.1\LinqDemo.csproj.AssemblyReference.cache
+C:\Dev\Week11\Week11\LinqDemo\obj\Debug\netcoreapp3.1\LinqDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\Week11\Week11\LinqDemo\obj\Debug\netcoreapp3.1\LinqDemo.AssemblyInfoInputs.cache
+C:\Dev\Week11\Week11\LinqDemo\obj\Debug\netcoreapp3.1\LinqDemo.AssemblyInfo.cs
+C:\Dev\Week11\Week11\LinqDemo\obj\Debug\netcoreapp3.1\LinqDemo.csproj.CoreCompileInputs.cache
+C:\Dev\Week11\Week11\LinqDemo\obj\Debug\netcoreapp3.1\LinqDemo.dll
+C:\Dev\Week11\Week11\LinqDemo\obj\Debug\netcoreapp3.1\LinqDemo.pdb
+C:\Dev\Week11\Week11\LinqDemo\obj\Debug\netcoreapp3.1\LinqDemo.genruntimeconfig.cache

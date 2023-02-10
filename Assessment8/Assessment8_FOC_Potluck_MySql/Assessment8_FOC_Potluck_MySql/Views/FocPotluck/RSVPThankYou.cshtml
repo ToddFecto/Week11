@@ -1,0 +1,23 @@
+﻿@model TeamMember
+@{
+    ViewData["Title"] = "RSVPThankYou";
+}
+
+<link href="/css/styles.css" rel="stylesheet" />
+
+<div class="ThankYouBox">
+    Thank you @Model.FirstName @Model.LastName for RSVP'ing for our potluck series!
+    <br />
+    Please confirm your information or go back to the RSPV page if changes are needed:
+    <br />
+    <ul>
+        <li>Name: @Model.FirstName @Model.LastName</li>
+        <li>Email: <a href="mailto: @Model.EmailAddress">@Model.EmailAddress</a></li>
+        <li>Date Attending: @Model.AttendanceDate</li>
+        <li>Guest Name: @Model.GuestName</li>
+    </ul>
+    We will contact you at @Model.EmailAddress with any new updates for this outting.
+    <br />
+    Don't forget to go to our "Bring a Dish" page to sign up to bring a dish or beverage!
+</div>
+

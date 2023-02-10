@@ -1,0 +1,45 @@
+﻿
+.RSVPBox {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: cornsilk;
+    margin: 0.25em 0.25em 0.25em 0.25em;
+    padding: 0.25em 0.25em 0.25em 0.25em;
+    width: 400px;
+    color: crimson
+}
+
+.RSVPForm {
+    font-family:'Century Gothic';
+    background-color: teal;
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    width: 400px;
+    color: darkred;
+}
+
+.BringDish {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: cornsilk;
+    margin: 0.25em 0.25em 0.25em 0.25em;
+    padding: 0.25em 0.25em 0.25em 0.25em;
+    width: 475px;
+    color: crimson;
+}
+
+.BringDishForm {
+    font-family:Arial;
+    background-color: blue;
+    margin: 0.25em 0.25em 0.25em 0.25em;
+    padding: 0.25em 0.25em 0.25em 0.25em;
+    width: 475px;
+    color: crimson;
+}
+
+.ThankYouBox {
+    font-family:'Gill Sans';
+    background-color: antiquewhite;
+    margin: 0.25em 0.25em 0.25em 0.25em;
+    padding: 0.25em 0.25em 0.25em 0.25em;
+    width: 475px;
+    color: black;
+}

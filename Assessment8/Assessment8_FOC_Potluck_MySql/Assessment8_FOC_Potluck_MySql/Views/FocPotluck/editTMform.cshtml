@@ -1,0 +1,35 @@
+﻿@model TeamMember
+@{
+    ViewData["Title"] = "editTMform";
+}
+
+<link href="/css/styles.css" rel="stylesheet" />
+
+<div class="RSVPBox">
+    <h2>RSVP</h2>
+</div>
+<div>
+    @ViewData["Message"]
+</div>
+
+<div class="RSVPForm">
+    <form method="post" action="/FocPotluck/savetm">
+        <input type="hidden" name="id" value="@Model.id" />
+        First Name:    <input type="text" name="FirstName" value="@Model.FirstName"/><br />
+        Last Name:     <input type="text" name="LastName" value="@Model.LastName"/><br />
+        Email Address: <input type="email" name="EmailAddress" value="@Model.EmailAddress"/><br />
+        <label for="AttendanceDate">Attendance Date:</label>
+        <select name="AttendanceDate" id="AttendanceDate">
+            <option value="@Model.AttendanceDate">@Model.AttendanceDate</option>
+            <option value="2021-10-02 13:00:00">10/02/2021 13:00:00</option>
+            <option value="2021-10-03 13:00:00">10/03/2021 13:00:00</option>
+            <option value="2021-10-09 12:00:00">10/09/2021 12:00:00</option>
+            <option value="2021-10-10 12:00:00">10/10/2021 12:00:00</option>
+            <option value="2021-10-16 19:00:00">10/16/2021 19:00:00</option>
+            <option value="2021-10-17 16:00:00">10/17/2021 16:00:00</option>
+        </select><br />
+        Guest Name: <input type="text" name="GuestName" value="@Model.GuestName"/><br />
+        <input type="submit" value="Save" />
+    </form>
+</div>
+
